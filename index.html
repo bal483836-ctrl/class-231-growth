@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>计231班 - 成长与成果档案</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="top-nav">
+    <div class="nav-links">
+      <a href="#top" class="active">首页</a>
+      <a href="#timeline">成长轨迹</a>
+      <a href="#model-stage-1">运行日志</a>
+      <!-- 新增：点击跳转到结尾 -->
+      <a href="#result">运行结果</a>
+    </div>
+    <div class="nav-right">AHUT · CS · 计231班</div>
+  </header>
+
+  <div class="main-container" id="top">
+    <!-- 左侧边栏 -->
+    <aside class="sidebar">
+      <!-- 纯 CSS 绘制的班徽 (尺寸已缩小) -->
+      <div class="sidebar-logo">
+        <div class="logo-ring"></div>
+        <div class="logo-core">
+          <span class="logo-cs">CS</span>
+          <span class="logo-number">231</span>
+        </div>
+      </div>
+
+      <h1 class="sidebar-title" style="text-align: center;">计231班</h1>
+      
+      <p class="sidebar-motto" style="text-align: center;">擦亮“红芯”底色，“编译”无悔青春</p>
+      
+      <div class="sidebar-info">
+        <p>📍 安徽工业大学 · 计算机科学与技术</p>
+        <p>👥 39人 | 党员(含预备) 5人</p>
+        <p>👨‍🏫 辅导员：朱筱</p>
+        <p>👨‍🏫 辅导员：奚锡珍</p>
+        <p>👨‍🏫 班主任：唐振</p>
+      </div>
+
+      <!-- 班级成长程序 (锚点导航) -->
+      <div class="growth-model">
+        <h3>青春程序运行日志</h3>
+        <ul class="model-steps">
+          <li><a href="#model-stage-1"><span>01</span> 程序初始化</a></li>
+          <li><a href="#model-stage-2"><span>02</span> 配置运行参数</a></li>
+          <li><a href="#model-stage-3"><span>03</span> 代码调试，实战练兵</a></li>
+          <li><a href="#model-stage-4"><span>04</span> 功能上线，服务输出</a></li>
+          <li><a href="#model-stage-5"><span>05</span> 复盘迭代，持续更新</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- 右侧主体内容 -->
+    <main class="content">
+      <!-- 数据看板 -->
+      <section class="metrics-section">
+        <div class="metrics-grid">
+          <div class="metric-box box-blue">
+            <span class="metric-val">94.87%</span>
+            <span class="metric-label">英语四级通过率 (年级第1)</span>
+          </div>
+          <div class="metric-box box-orange">
+            <span class="metric-val">75<span class="unit">项</span></span>
+            <span class="metric-label">科创竞赛获奖总数</span>
+          </div>
+          <div class="metric-box box-green">
+            <span class="metric-val">78.09</span>
+            <span class="metric-label">平均学分绩 (年级第1)</span>
+          </div>
+          <div class="metric-box box-purple">
+            <span class="metric-val">100%</span>
+            <span class="metric-label">体测合格率 / 志愿参与率</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 班级简介 (加入了大合照) -->
+      <section class="class-intro">
+        <div class="intro-photo-wrapper">
+          <img src="./images/image01.png" alt="计231班大合影">
+        </div>
+        
+        <div class="intro-badge">> About_Us</div>
+        <h2>码力全开 · 青春程序说明书</h2>
+        <p>我们来自五湖四海，因相同的热爱相聚于此。39名同学彼此尊重、携手并进，5名党员领航前行。我们用代码搭建梦想，用键盘敲出未来，用青春书写属于计231的记忆。同一个班级，同一个理想。把大学四年比作一次「代码编译运行」，敲好每一行青春代码，跑稳成长完整程序。</p>
+      </section>
+
+      <!-- 成长时间轴 -->
+      <section id="timeline" class="timeline-section">
+        <div class="section-header">
+          <h2>班级成长时间轴</h2>
+          <div class="filters">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="ideology">思想引领</button>
+            <button class="filter-btn" data-filter="study">学风科创</button>
+            <button class="filter-btn" data-filter="service">志愿实践</button>
+            <button class="filter-btn" data-filter="vitality">文体生活</button>
+          </div>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+          <div id="timeline-container">
+            <!-- 内容由 JS 渲染 -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 代码编译运行（五大模块） ================= -->
+      
+      <!-- 01 程序初始化 -->
+      <section id="model-stage-1" class="model-section stage-1">
+        <div class="model-header">
+          <div class="model-num bg-blue">01</div>
+          <div class="model-title-group">
+            <h2>程序初始化</h2>
+            <span>班级架构与制度（准备环境、组建团队）</span>
+          </div>
+        </div>
+        <div class="model-content two-col">
+          <div class="model-text">
+            <div class="talk-track">
+              以制度规范班级管理，以团结凝聚奋进力量。班级坚持制度建设与人文关怀相结合，建立班委分工负责制、寝室长负责制，完善班级公约、学业帮扶、民主监督、班务公开等工作机制。落实学业预警、评奖评优公开评议和体测激励制度，营造规范有序、民主和谐、团结互助的班级氛围。
+            </div>
+            <div class="data-highlight-box">
+              <div class="hl-item">
+                <div class="hl-top">
+                  <strong>连续3年</strong>
+                  <span>校先进班级</span>
+                </div>
+              </div>
+              <div class="hl-item">
+                <div class="hl-top">
+                  <strong>五四红旗</strong>
+                  <span>团支部</span>
+                </div>
+              </div>
+            </div>
+            <div class="small-note">班级多间宿舍获评校级“文明宿舍”“学风优良宿舍”，以优良舍风涵养良好班风。</div>
+          </div>
+          <div class="model-image">
+            <img src="./images/image31.png" alt="制度筑基">
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 配置运行参数 -->
+      <section id="model-stage-2" class="model-section stage-2">
+        <div class="model-header">
+          <div class="model-num bg-orange">02</div>
+          <div class="model-title-group">
+            <h2>配置运行参数</h2>
+            <span>“三航”工程与思想引领（定好方向、守住底线）</span>
+          </div>
+        </div>
+        <div class="model-content two-col reverse">
+          <div class="model-text">
+            <div class="talk-track">
+              以红色信仰校准青春航向，以先锋力量引领全面成长。班级构建“班主任、辅导员导航，党员领航，团员青年启航”的思想引领体系，坚持党建带团建、团建促班建，推动理论学习、主题教育和青年实践有机融合。
+            </div>
+            <div class="data-highlight-box">
+              <div class="hl-item">
+                <div class="hl-top">
+                  <strong>38场</strong>
+                  <span>主题班会/团日</span>
+                </div>
+              </div>
+              <div class="hl-item">
+                <div class="hl-top">
+                  <strong>100%</strong>
+                  <span>活动参与覆盖率</span>
+                </div>
+              </div>
+            </div>
+            <div class="tuimian-box">
+              <h4>先锋领航 · 六人推免</h4>
+              <ul class="tuimian-list">
+                <li><strong>侯皖婷</strong> <span>华中科技大学</span></li>
+                <li><strong>赵星辰</strong> <span>苏州大学</span></li>
+                <li><strong>王曦令</strong> <span>合肥工业大学</span></li>
+                <li><strong>何思雨</strong> <span>安徽大学</span></li>
+                <li><strong>邓敏珠</strong> <span>安徽大学</span></li>
+                <li><strong>余海洋</strong> <span>安徽大学</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="model-image">
+            <img src="./images/image32.png" alt="思想铸魂">
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 代码调试，实战练兵 -->
+      <section id="model-stage-3" class="model-section stage-3">
+        <div class="model-header">
+          <div class="model-num bg-teal">03</div>
+          <div class="model-title-group">
+            <h2>代码调试，实战练兵</h2>
+            <span>学风、科创、文体与安全（反复测试、打磨技术）</span>
+          </div>
+        </div>
+        <div class="model-content two-col">
+          <div class="model-text">
+            <div class="talk-track">
+              以优良学风筑牢成才根基，以创新竞赛激发青春潜能。班级坚持以学促赛、以赛促创，持续完善学业帮扶、朋辈互助和竞赛经验分享机制。依托数学建模、程序设计等竞赛平台，推动课堂学习向创新实践延伸。上课、刷题、打比赛，就像写代码、找bug、反复调试，提升专业本领。
+            </div>
+            <div class="comp-stats-row">
+              <div class="comp-box">
+                <span class="num">5</span><span class="lbl">国际级奖项</span>
+              </div>
+              <div class="comp-box">
+                <span class="num">14</span><span class="lbl">国家级奖项</span>
+              </div>
+              <div class="comp-box">
+                <span class="num">44</span><span class="lbl">省级奖项</span>
+              </div>
+            </div>
+            <p class="small-note">代表性成果：美国大学生数学建模竞赛、全国大学生物联网创新挑战赛国家一等奖、发表SCI论文1篇等。</p>
+            <div class="honor-tags" style="margin-top: 15px;">
+              <span>国家奖学金</span><span>国家励志奖学金 13人</span><span>校特等奖学金 2人</span>
+            </div>
+          </div>
+          <div class="model-image">
+            <img src="./images/image30.png" alt="学风科创">
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 功能上线，服务输出 -->
+      <section id="model-stage-4" class="model-section stage-4">
+        <div class="model-header">
+          <div class="model-num bg-gold">04</div>
+          <div class="model-title-group">
+            <h2>功能上线，服务输出</h2>
+            <span>社会实践、学生工作与志愿服务（落地应用、服务他人）</span>
+          </div>
+        </div>
+        <div class="model-content">
+          <div class="talk-track" style="margin-bottom: 24px;">
+            以知行合一拓展成长边界，以五育融合书写青春华章。班级坚持德智体美劳全面发展，将专业学习与文体建设、劳动教育、社会实践、志愿服务有机融合，引导同学们走出课堂、深入校园、服务社会。学好技术不是只存电脑里，把功能上线，用技术做志愿、做服务。
+          </div>
+          <div class="wuyu-grid">
+            <div class="wuyu-item">
+              <h4>体育强身</h4>
+              <p>新生杯足球赛冠军<br>体育文化节排球/乒乓球前三<br>班级篮球赛季军</p>
+            </div>
+            <div class="wuyu-item">
+              <h4>美育润心</h4>
+              <p>志愿微电影最佳导演奖<br>心理话剧二等奖</p>
+            </div>
+            <div class="wuyu-item">
+              <h4>劳动砺志</h4>
+              <p>劳动教育周清扫<br>校园绿植养护<br>宿舍安全反诈常态化</p>
+            </div>
+            <div class="wuyu-item">
+              <h4>志愿同行</h4>
+              <p>志愿服务超 1000 小时<br>公益活动 200 余次<br>无偿献血 30 人次</p>
+            </div>
+          </div>
+          <div class="model-image full-image">
+            <img src="./images/image29.png" alt="实践育人">
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 复盘迭代，持续更新 -->
+      <section id="model-stage-5" class="model-section stage-5">
+        <div class="model-header">
+          <div class="model-num bg-slate">05</div>
+          <div class="model-title-group">
+            <h2>复盘迭代，持续更新</h2>
+            <span>典型事例与毕业去向（回看不足、规划下一阶段）</span>
+          </div>
+        </div>
+        <div class="model-content two-col reverse">
+          <div class="model-text">
+            <div class="talk-track">
+              以动态迭代优化成长路径，以多元发展奔赴青春理想。班级坚持以学生成长需求为导向，依托学业帮扶、科研指导、升学交流和就业服务等机制，推动精准化、个性化发展引导，帮助同学们明确奋斗目标、找准发展方向。
+            </div>
+            <!-- 修改后拆分好的毕业去向数据 -->
+            <div class="progress-bars">
+              <div class="pb-item">
+                <div class="pb-label"><span>备战考研</span><span>19人</span></div>
+                <div class="pb-track"><div class="pb-fill fill-blue" style="width: 48.7%;"></div></div>
+              </div>
+              <div class="pb-item">
+                <div class="pb-label"><span>成功就业</span><span>8人</span></div>
+                <div class="pb-track"><div class="pb-fill fill-green" style="width: 20.5%;"></div></div>
+              </div>
+              <div class="pb-item">
+                <div class="pb-label"><span>成功推免</span><span>6人</span></div>
+                <div class="pb-track"><div class="pb-fill fill-orange" style="width: 15.3%;"></div></div>
+              </div>
+              <div class="pb-item">
+                <div class="pb-label"><span>考公 / 考编</span><span>3人</span></div>
+                <div class="pb-track"><div class="pb-fill fill-purple" style="width: 7.6%;"></div></div>
+              </div>
+              <div class="pb-item">
+                <div class="pb-label"><span>创业发展</span><span>2人</span></div>
+                <div class="pb-track"><div class="pb-fill fill-pink" style="width: 5.1%;"></div></div>
+              </div>
+              <div class="pb-item">
+                <div class="pb-label"><span>意向征兵入伍</span><span>1人</span></div>
+                <div class="pb-track"><div class="pb-fill fill-gray" style="width: 2.5%;"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="model-image">
+            <img src="./images/image17.png" alt="协同成长">
+          </div>
+        </div>
+      </section>
+
+      <!-- 结尾升华 (新增 id="result" 用于导航跳转) -->
+      <div id="result" class="final-slogan">
+        <div class="terminal-grid"></div>
+        <div class="terminal-content">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">console — 运行结果</span>
+          </div>
+          <div class="terminal-body">
+            <p class="code-line"><span class="prompt">></span> Running final_compilation.exe ...</p>
+            <p class="code-line success"><span class="prompt">></span> [SUCCESS] 0 errors, 0 warnings.</p>
+            <h2 class="main-slogan">以青春为代码，以奋斗为编译器</h2>
+            <p class="sub-slogan"><span class="cursor">_</span> 持续运行，向阳成长</p>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
