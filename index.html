@@ -14,7 +14,6 @@
       <a href="#top" class="active">首页</a>
       <a href="#timeline">成长轨迹</a>
       <a href="#model-stage-1">运行日志</a>
-      <!-- 新增：点击跳转到结尾 -->
       <a href="#result">运行结果</a>
     </div>
     <div class="nav-right">AHUT · CS · 计231班</div>
@@ -23,7 +22,7 @@
   <div class="main-container" id="top">
     <!-- 左侧边栏 -->
     <aside class="sidebar">
-      <!-- 纯 CSS 绘制的班徽 (尺寸已缩小) -->
+      <!-- 纯 CSS 绘制的班徽 -->
       <div class="sidebar-logo">
         <div class="logo-ring"></div>
         <div class="logo-core">
@@ -37,11 +36,11 @@
       <p class="sidebar-motto" style="text-align: center;">擦亮“红芯”底色，“编译”无悔青春</p>
       
       <div class="sidebar-info">
-        <p>📍 安徽工业大学 · 计算机科学与技术</p>
-        <p>👥 39人 | 党员(含预备) 5人</p>
-        <p>👨‍🏫 辅导员：朱筱</p>
-        <p>👨‍🏫 辅导员：奚锡珍</p>
-        <p>👨‍🏫 班主任：唐振</p>
+        <p>安徽工业大学 · 计算机科学与技术</p>
+        <p>班级人数：39人 | 党员(含预备)：5人</p>
+        <p>辅导员：朱筱</p>
+        <p>辅导员：奚锡珍</p>
+        <p>班主任：唐振</p>
       </div>
 
       <!-- 班级成长程序 (锚点导航) -->
@@ -62,34 +61,34 @@
       <!-- 数据看板 -->
       <section class="metrics-section">
         <div class="metrics-grid">
-          <div class="metric-box box-blue">
+          <div class="metric-box">
             <span class="metric-val">94.87%</span>
             <span class="metric-label">英语四级通过率 (年级第1)</span>
           </div>
-          <div class="metric-box box-orange">
+          <div class="metric-box">
             <span class="metric-val">75<span class="unit">项</span></span>
             <span class="metric-label">科创竞赛获奖总数</span>
           </div>
-          <div class="metric-box box-green">
+          <div class="metric-box">
             <span class="metric-val">78.09</span>
             <span class="metric-label">平均学分绩 (年级第1)</span>
           </div>
-          <div class="metric-box box-purple">
+          <div class="metric-box">
             <span class="metric-val">100%</span>
             <span class="metric-label">体测合格率 / 志愿参与率</span>
           </div>
         </div>
       </section>
 
-      <!-- 班级简介 (加入了大合照) -->
+      <!-- 班级简介 -->
       <section class="class-intro">
         <div class="intro-photo-wrapper">
           <img src="./images/image01.png" alt="计231班大合影">
         </div>
         
-        <div class="intro-badge">> About_Us</div>
-        <h2>码力全开 · 青春程序说明书</h2>
-        <p>我们来自五湖四海，因相同的热爱相聚于此。39名同学彼此尊重、携手并进，5名党员领航前行。我们用代码搭建梦想，用键盘敲出未来，用青春书写属于计231的记忆。同一个班级，同一个理想。把大学四年比作一次「代码编译运行」，敲好每一行青春代码，跑稳成长完整程序。</p>
+        <div class="intro-badge">关于我们</div>
+        <h2>2023级计算机1班</h2>
+        <p>我们是由39名同学组成的班集体，其中有5名党员。这个网页记录了大家大学四年的经历，有刚入学时的军训，有一起熬夜打比赛、做项目的日子，也有去社区做志愿和一起在操场玩闹的瞬间。大学四年就像写一段代码，从建文件夹、定规则开始，到中间不停地找Bug、修Bug，再到最后打包上线、各奔东西。我们把这段过程整理在这里，算是给这四年交一份完整的答卷。</p>
       </section>
 
       <!-- 成长时间轴 -->
@@ -143,7 +142,24 @@
                 </div>
               </div>
             </div>
-            <div class="small-note">班级多间宿舍获评校级“文明宿舍”“学风优良宿舍”，以优良舍风涵养良好班风。</div>
+                        <!-- 替换掉原本的 small-note 灰色框 -->
+            <div class="dorm-matrix">
+              <div class="dorm-header">宿舍建设成果</div>
+              <div class="dorm-grid">
+                <div class="dorm-item">
+                  <span class="dorm-num">4</span>
+                  <span class="dorm-label">校文明宿舍</span>
+                </div>
+                <div class="dorm-item">
+                  <span class="dorm-num">3</span>
+                  <span class="dorm-label">学风优良宿舍</span>
+                </div>
+                <div class="dorm-item">
+                  <span class="dorm-num">7</span>
+                  <span class="dorm-label">班级所在宿舍</span>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="model-image">
             <img src="./images/image31.png" alt="制度筑基">
@@ -211,6 +227,8 @@
             <div class="talk-track">
               以优良学风筑牢成才根基，以创新竞赛激发青春潜能。班级坚持以学促赛、以赛促创，持续完善学业帮扶、朋辈互助和竞赛经验分享机制。依托数学建模、程序设计等竞赛平台，推动课堂学习向创新实践延伸。上课、刷题、打比赛，就像写代码、找bug、反复调试，提升专业本领。
             </div>
+            
+            <!-- 奖项数据 -->
             <div class="comp-stats-row">
               <div class="comp-box">
                 <span class="num">5</span><span class="lbl">国际级奖项</span>
@@ -222,9 +240,23 @@
                 <span class="num">44</span><span class="lbl">省级奖项</span>
               </div>
             </div>
-            <p class="small-note">代表性成果：美国大学生数学建模竞赛、全国大学生物联网创新挑战赛国家一等奖、发表SCI论文1篇等。</p>
-            <div class="honor-tags" style="margin-top: 15px;">
-              <span>国家奖学金</span><span>国家励志奖学金 13人</span><span>校特等奖学金 2人</span>
+            
+            <!-- 删除了代表性成果，直接接三行奖学金标签 -->
+            <div class="honor-tags-grid" style="margin-top: 16px;">
+              <div class="honor-row row-2">
+                <span class="tag-gold">国家奖学金 1人</span>
+                <span class="tag-gold">中天钢铁奖学金 1人</span>
+              </div>
+              <div class="honor-row row-2">
+                <span class="tag-orange">国家励志奖学金 13人</span>
+                <span class="tag-green">校特等奖学金 2人</span>
+              </div>
+              <div class="honor-row row-4">
+                <span class="tag-green">校一等奖学金 6人</span>
+                <span class="tag-green">校二等奖学金 12人</span>
+                <span class="tag-green">校三等奖学金 7人</span>
+                <span class="tag-green">体测奖学金 3人</span>
+              </div>
             </div>
           </div>
           <div class="model-image">
@@ -249,19 +281,19 @@
           <div class="wuyu-grid">
             <div class="wuyu-item">
               <h4>体育强身</h4>
-              <p>新生杯足球赛冠军<br>体育文化节排球/乒乓球前三<br>班级篮球赛季军</p>
+              <p>新生杯足球赛冠军<br>体育文化节排球前三<br>体育文化节乒乓球前三<br>班级篮球赛季军</p>
             </div>
             <div class="wuyu-item">
               <h4>美育润心</h4>
-              <p>志愿微电影最佳导演奖<br>心理话剧二等奖</p>
+              <p>志愿微电影最佳导演奖<br>心理话剧“剧与情融”二等奖<br>“五四大合唱”活动<br>院诗朗诵比赛</p>
             </div>
             <div class="wuyu-item">
               <h4>劳动砺志</h4>
-              <p>劳动教育周清扫<br>校园绿植养护<br>宿舍安全反诈常态化</p>
+              <p>劳动教育周清扫教学楼<br>“雷锋月”宿舍关怀活动<br>校园绿植养护实践<br>以劳树德植树活动</p>
             </div>
             <div class="wuyu-item">
               <h4>志愿同行</h4>
-              <p>志愿服务超 1000 小时<br>公益活动 200 余次<br>无偿献血 30 人次</p>
+              <p>志愿服务超 1000 小时<br>参加志愿公益活动 200 余次<br>累计无偿献血 30 人次<br>社会实践参与率 100%</p>
             </div>
           </div>
           <div class="model-image full-image">
@@ -284,7 +316,7 @@
             <div class="talk-track">
               以动态迭代优化成长路径，以多元发展奔赴青春理想。班级坚持以学生成长需求为导向，依托学业帮扶、科研指导、升学交流和就业服务等机制，推动精准化、个性化发展引导，帮助同学们明确奋斗目标、找准发展方向。
             </div>
-            <!-- 修改后拆分好的毕业去向数据 -->
+            <!-- 拆分好的毕业去向数据 -->
             <div class="progress-bars">
               <div class="pb-item">
                 <div class="pb-label"><span>备战考研</span><span>19人</span></div>
@@ -318,7 +350,7 @@
         </div>
       </section>
 
-      <!-- 结尾升华 (新增 id="result" 用于导航跳转) -->
+      <!-- 结尾升华 -->
       <div id="result" class="final-slogan">
         <div class="terminal-grid"></div>
         <div class="terminal-content">
