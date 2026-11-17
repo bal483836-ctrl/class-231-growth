@@ -105,7 +105,7 @@ function renderTimeline(filter = "all") {
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <h3>${event.title}</h3>
-            <p class="location">📍 ${event.location}</p>
+            <p class="location">${event.location}</p>
             <p class="desc">${event.desc}</p>
             ${event.image ? `
               <div class="card-images">
