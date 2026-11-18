@@ -40,13 +40,23 @@ body {
 /* 左侧边栏 */
 .sidebar { width: 240px; flex-shrink: 0; position: sticky; top: 100px; align-self: flex-start; }
 
-/* 班徽 */
-.sidebar-logo { position: relative; width: 100px; height: 100px; margin: 0 auto 20px; display: flex; justify-content: center; align-items: center; }
-.logo-ring { position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(from 0deg, transparent 0%, var(--accent-blue) 25%, transparent 50%, var(--accent-blue) 75%, transparent 100%); animation: spin 6s linear infinite; -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px)); mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px)); }
-.logo-core { width: 88px; height: 88px; background: #0f172a; border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: inset 0 0 15px rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.3); z-index: 2; }
-.logo-cs { font-size: 11px; color: #38bdf8; font-weight: 800; letter-spacing: 2px; margin-bottom: -2px; }
-.logo-number { font-size: 30px; color: #ffffff; font-weight: 900; font-family: monospace; letter-spacing: 1px; text-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }
-@keyframes spin { 100% { transform: rotate(360deg); } }
+/* ================= 左侧真实图片班徽 ================= */
+.sidebar-logo-img {
+  width: 120px; /* 你可以根据需要调整这个宽度，100px到140px之间比较合适 */
+  height: 120px;
+  margin: 0 auto 20px; /* 居中显示，底部留出20px间距 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-logo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 保证班徽完整显示，不会被裁剪 */
+  border-radius: 50%; /* 如果你的原图是正方形的，这行会把它裁成圆角，如果原图自带透明背景，这行可以删掉 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 加一点淡淡的阴影，让班徽更有立体感 */
+}
 
 .sidebar-title { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
 .sidebar-motto { font-size: 14px; color: var(--accent-blue); font-weight: 600; margin-bottom: 20px; white-space: nowrap; }
@@ -85,18 +95,29 @@ body {
 /* ================= 改进后的班级简介 ================= */
 .class-intro { position: relative; background: linear-gradient(135deg, #ffffff 0%, #f4f7f9 100%); padding: 40px; border-radius: 16px; margin-bottom: 50px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
 
-/* 顶部宽幅大合照 */
+/* 顶部宽幅大合照 - 完整显示版 */
 .intro-photo-wrapper {
   width: 100%;
-  max-height: 280px;
+  /* 删除了 max-height: 280px; 让高度自适应图片比例 */
   overflow: hidden;
-  border-radius: 0; /* 改成 0，也就是直角矩形 */
+  border-radius: 0; /* 保持直角 */
   margin-bottom: 30px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--border-color);
+  background-color: #f8fafc; /* 如果图片有留白，底色会好看点 */
 }
-.intro-photo-wrapper img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; transition: transform 0.4s ease; }
-.intro-photo-wrapper:hover img { transform: scale(1.03); }
+
+.intro-photo-wrapper img {
+  width: 100%;
+  height: auto; /* 高度自适应 */
+  object-fit: contain; /* 完整显示图片，不裁剪 */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.intro-photo-wrapper:hover img {
+  transform: scale(1.02); /* 缩放稍微改小一点，避免完整显示时画面抖动太厉害 */
+}
 
 .intro-badge { font-family: monospace; color: var(--accent-blue); font-size: 14px; font-weight: bold; margin-bottom: 10px; letter-spacing: 1px; }
 .class-intro h2 { font-size: 24px; margin-bottom: 16px; color: var(--text-main); font-weight: 800; }
